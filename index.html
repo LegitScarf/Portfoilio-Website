@@ -269,6 +269,64 @@ nav {
   display: block; text-transform: uppercase; font-weight: 500;
 }
 
+/* ── Top-Right Circular Profile Avatar ── */
+.hero-top-avatar {
+  position: absolute;
+  top: 86px;
+  right: 76px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease 0.3s forwards;
+}
+
+.hta-frame {
+  position: relative;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.34, 1.3, 0.64, 1), box-shadow 0.35s;
+}
+.hta-frame:hover {
+  transform: translateY(-4px) scale(1.06);
+}
+.hta-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 2px solid rgba(245, 200, 66, 0.55);
+  box-shadow: 0 0 24px rgba(245, 200, 66, 0.22), 0 8px 30px rgba(0, 0, 0, 0.65);
+  display: block;
+}
+.hta-ring {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(45, 212, 191, 0.45);
+  pointer-events: none;
+  animation: spinSlow 24s linear infinite;
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.hta-status {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--teal);
+  border: 2.5px solid var(--void);
+  box-shadow: 0 0 10px var(--teal);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
 /* Hero visual — glass profile card */
 .hero-visual {
   flex-shrink: 0; width: 340px;
@@ -1036,6 +1094,8 @@ footer {
   .vision-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { display: none; }
   #hero { gap: 0; }
+  .hero-top-avatar { top: 82px; right: 28px; }
+  .hta-frame { width: 68px; height: 68px; }
 }
 @media(max-width: 768px) {
   nav { padding: 0 24px; }
@@ -1051,6 +1111,9 @@ footer {
   .proj-tile, .proj-tile.featured { width: 85vw; min-width: 300px; padding: 22px; }
   #projects { padding-left: 24px !important; padding-right: 24px !important; }
   .proj-header { padding: 0 24px; flex-direction: column; gap: 12px; }
+}
+@media(max-width: 640px) {
+  .hero-top-avatar { display: none; }
 }
 @media(max-width: 480px) {
   .ach-grid { grid-template-columns: 1fr; }
@@ -1081,6 +1144,15 @@ footer {
 
 <!-- HERO -->
 <section id="hero">
+  <!-- Top-Right Circular Avatar (directly beneath 'Get in touch' CTA) -->
+  <div class="hero-top-avatar" title="Arpan Kumar Mallik">
+    <div class="hta-frame">
+      <img src="assets/profile.jpg" alt="Arpan Kumar Mallik" class="hta-img">
+      <div class="hta-ring"></div>
+      <div class="hta-status" title="Active & Available"></div>
+    </div>
+  </div>
+
   <div class="hero-content">
     <div class="hero-badge">Available for Opportunities</div>
 
@@ -1090,7 +1162,7 @@ footer {
     <div class="hero-sub">Product Builder.</div>
 
     <p class="hero-desc">
-      CS graduate from <strong>KIIT</strong>, SWE Trainee at <strong>Capgemini</strong>, and a product builder. I build agentic AI systems, production ML & DL pipelines, and cloud infrastructure that actually ships.
+      CS graduate from <strong>KIIT</strong>, SWE Trainee at <strong>Capgemini</strong>, and builder of <strong>AutoJob</strong>. I build agentic AI systems, production ML pipelines, and cloud infrastructure that actually ships.
     </p>
 
     <div class="hero-actions">
@@ -1122,7 +1194,9 @@ footer {
     <div class="hero-wrapper">
       <div class="glass-card" id="hero-card">
         <div class="gc-header">
-          <div class="gc-avatar">A</div>
+          <div class="gc-avatar">
+            <img src="assets/profile.jpg" alt="Arpan" style="width:100%;height:100%;border-radius:14px;object-fit:cover;object-position:center 20%;display:block;">
+          </div>
           <div>
             <div class="gc-name">Arpan Kumar Mallik</div>
             <div class="gc-role">AI Engineer · Data Scientist · Builder</div>
@@ -1132,7 +1206,7 @@ footer {
         <div class="gc-divider"></div>
         <div class="gc-row">
           <span class="gc-key">University</span>
-          <span class="gc-val gold">KIIT — 8.22 CGPA</span>
+          <span class="gc-val gold">KIIT — 8.33 CGPA</span>
         </div>
         <div class="gc-row">
           <span class="gc-key">Current Role</span>
@@ -1163,7 +1237,7 @@ footer {
 
       <div class="float-card float-card-1">
         <div class="fc-label">CGPA</div>
-        <div class="fc-value"><span class="g">8.22</span> / 10</div>
+        <div class="fc-value"><span class="g">8.33</span> / 10</div>
       </div>
       <div class="float-card float-card-2">
         <div class="fc-label">Projects Live</div>
@@ -1235,7 +1309,7 @@ footer {
         </div>
         <div class="ic-row">
           <div class="ic-bullet teal"></div>
-          <div class="ic-text">B.Tech CSE — KIIT University<span>Graduated 2026 · CGPA 8.22</span></div>
+          <div class="ic-text">B.Tech CSE — KIIT University<span>Graduated 2026 · CGPA 8.33</span></div>
         </div>
       </div>
       <div class="info-card">
