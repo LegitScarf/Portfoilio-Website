@@ -592,7 +592,7 @@ section.reveal.visible { opacity: 1; transform: none; }
 .proj-scroll-wrap::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 2px; }
 
 .proj-tile {
-  flex-shrink: 0; width: 340px;
+  flex-shrink: 0; width: 430px;
   background: var(--glass);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
@@ -623,7 +623,7 @@ section.reveal.visible { opacity: 1; transform: none; }
 .proj-tile.t-rose { --tile-glow: rgba(251,113,133,0.05); --tile-border: rgba(251,113,133,0.3); }
 
 /* Featured wider tile */
-.proj-tile.featured { width: 440px; }
+.proj-tile.featured { width: 470px; }
 
 .pt-top {
   display: flex; justify-content: space-between;
@@ -661,8 +661,75 @@ section.reveal.visible { opacity: 1; transform: none; }
 }
 .pt-desc {
   font-size: 13px; color: var(--text-2);
-  line-height: 1.7; font-weight: 300; margin-bottom: 18px;
+  line-height: 1.7; font-weight: 300; margin-bottom: 16px;
 }
+
+/* ── Video Display Pane ── */
+.pt-video-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.6), 0 8px 24px rgba(0,0,0,0.35);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.proj-tile:hover .pt-video-wrap {
+  border-color: var(--tile-border, rgba(99,102,241,0.4));
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 28px rgba(0,0,0,0.5), 0 0 16px var(--tile-glow, rgba(99,102,241,0.15));
+}
+.pt-video-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.pt-video-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 0 4px;
+}
+.pt-video-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.pt-video-label .live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 8px var(--teal);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
+}
+.pt-video-link {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.pt-video-link:hover {
+  color: var(--gold);
+}
+
 .pt-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 18px; }
 .pt-tag {
   font-size: 10px; font-weight: 600; padding: 3px 9px;
@@ -897,6 +964,7 @@ footer {
   footer { padding: 36px 24px; }
   .footer-copy { text-align: left; }
   .proj-scroll-wrap { padding: 4px 24px 48px; margin: 0 -24px; }
+  .proj-tile, .proj-tile.featured { width: 85vw; min-width: 300px; padding: 22px; }
   #projects { padding-left: 24px !important; padding-right: 24px !important; }
   .proj-header { padding: 0 24px; flex-direction: column; gap: 12px; }
 }
@@ -1207,50 +1275,110 @@ footer {
 
   <div class="proj-scroll-wrap">
 
+    <!-- 01 AutoML -->
     <div class="proj-tile featured t-indigo">
       <div class="pt-top">
         <span class="pt-num">01 — Featured</span>
-        <span class="pt-badge wip">Building</span>
+        <span class="pt-badge live">Live</span>
       </div>
-      <div class="pt-icon">⚙️</div>
-      <div class="pt-name">NexAlpha</div>
-      <div class="pt-sub">AI Workflow Automation Platform</div>
-      <p class="pt-desc">Agentic workflow automation for SMBs and enterprises. Specialised agents handle repetitive business processes — data entry, reporting, cross-tool orchestration — end-to-end, so teams can focus on higher-value work.</p>
+      <div class="pt-icon">🤖</div>
+      <div class="pt-name">AutoML</div>
+      <div class="pt-sub">Agentic Model Training & Optimization Platform</div>
+      <p class="pt-desc">Architected a three-agent system on FastAPI, integrated via custom MCP servers and n8n workflows. Automates data profiling, statistical preprocessing, and synthesizes robust Scikit-learn training code with a Next.js execution dashboard.</p>
+      
+      <div class="pt-video-wrap">
+        <iframe class="pt-video-frame" src="https://drive.google.com/file/d/11J9LFPcJzzHUwzVqeW-wCaBmodXkK8BS/preview" allow="autoplay; fullscreen" loading="lazy" title="AutoML Demo Video"></iframe>
+      </div>
+      <div class="pt-video-meta">
+        <span class="pt-video-label"><span class="live-dot"></span>Video Demo</span>
+        <a href="https://drive.google.com/file/d/11J9LFPcJzzHUwzVqeW-wCaBmodXkK8BS/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pt-video-link">Open in Drive ↗</a>
+      </div>
+
       <div class="pt-tags">
-        <span class="pt-tag gold">CrewAI</span>
-        <span class="pt-tag indigo">Multi-Agent</span>
-        <span class="pt-tag gold">AWS</span>
-        <span class="pt-tag">Jenkins</span>
-        <span class="pt-tag indigo">Automation</span>
+        <span class="pt-tag gold">FastAPI</span>
+        <span class="pt-tag indigo">MCP</span>
+        <span class="pt-tag teal">n8n</span>
+        <span class="pt-tag violet">OpenAI</span>
+        <span class="pt-tag">Docker</span>
+        <span class="pt-tag">Next.js</span>
+        <span class="pt-tag gold">Scikit-Learn</span>
       </div>
       <div class="pt-metrics">
-        <div class="pt-metric"><span class="mv">5+</span><span class="ml">AI Agents</span></div>
-        <div class="pt-metric"><span class="mv">24/7</span><span class="ml">Live Monitor</span></div>
-        <div class="pt-metric"><span class="mv">AWS</span><span class="ml">Production</span></div>
+        <div class="pt-metric"><span class="mv">&lt; 3m</span><span class="ml">End-to-End</span></div>
+        <div class="pt-metric"><span class="mv">3</span><span class="ml">MCP Agents</span></div>
+        <div class="pt-metric"><span class="mv">FastAPI</span><span class="ml">Sandbox</span></div>
       </div>
-      <a href="https://legitscarf.github.io/" target="_blank" class="proj-link">View Live</a>
+      <a href="https://drive.google.com/file/d/11J9LFPcJzzHUwzVqeW-wCaBmodXkK8BS/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="proj-link">Watch Demo</a>
     </div>
 
+    <!-- 02 LeadFox -->
     <div class="proj-tile t-teal">
       <div class="pt-top">
         <span class="pt-num">02</span>
         <span class="pt-badge live">Live</span>
       </div>
-      <div class="pt-icon">🔬</div>
-      <div class="pt-name">BharatAlpha</div>
-      <div class="pt-sub">AI Equity Research Platform</div>
-      <p class="pt-desc">AI-powered equity research built for the Indian market. Fundamental analysis, sector intelligence, and company deep-dives — all at scale.</p>
+      <div class="pt-icon">🎯</div>
+      <div class="pt-name">LeadFox</div>
+      <div class="pt-sub">Autonomous Recruiter Outreach System</div>
+      <p class="pt-desc">Built a 3-agent CrewAI system layered atop n8n backend workflows exposed as MCP servers. Automates prospect research, verified email discovery, and personalized cold outreach drafting end-to-end, with human-in-the-loop approval gates.</p>
+      
+      <div class="pt-video-wrap">
+        <iframe class="pt-video-frame" src="https://drive.google.com/file/d/1O1ZJMb27GJ9k9sPTGOuu9hOhHbBJcl9l/preview" allow="autoplay; fullscreen" loading="lazy" title="LeadFox Demo Video"></iframe>
+      </div>
+      <div class="pt-video-meta">
+        <span class="pt-video-label"><span class="live-dot"></span>Video Demo</span>
+        <a href="https://drive.google.com/file/d/1O1ZJMb27GJ9k9sPTGOuu9hOhHbBJcl9l/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pt-video-link">Open in Drive ↗</a>
+      </div>
+
       <div class="pt-tags">
-        <span class="pt-tag teal">LLMs</span>
-        <span class="pt-tag">RAG</span>
-        <span class="pt-tag gold">AWS</span>
-        <span class="pt-tag teal">India Equity</span>
+        <span class="pt-tag indigo">CrewAI</span>
+        <span class="pt-tag teal">n8n</span>
+        <span class="pt-tag gold">MCP</span>
+        <span class="pt-tag">Hunter.io</span>
+        <span class="pt-tag">Firecrawl</span>
+        <span class="pt-tag violet">Streamlit</span>
       </div>
       <div class="pt-metrics">
-        <div class="pt-metric"><span class="mv">NSE</span><span class="ml">Coverage</span></div>
-        <div class="pt-metric"><span class="mv">v0.1</span><span class="ml">Beta</span></div>
+        <div class="pt-metric"><span class="mv">&lt; 10m</span><span class="ml">Per Prospect</span></div>
+        <div class="pt-metric"><span class="mv">3</span><span class="ml">CrewAI Agents</span></div>
+        <div class="pt-metric"><span class="mv">100%</span><span class="ml">Human-in-Loop</span></div>
       </div>
-      <a href="https://legitscarf.github.io/" target="_blank" class="proj-link">View Live</a>
+      <a href="https://drive.google.com/file/d/1O1ZJMb27GJ9k9sPTGOuu9hOhHbBJcl9l/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="proj-link">Watch Demo</a>
+    </div>
+
+    <!-- 03 Omega -->
+    <div class="proj-tile t-violet">
+      <div class="pt-top">
+        <span class="pt-num">03</span>
+        <span class="pt-badge live">Live</span>
+      </div>
+      <div class="pt-icon">📈</div>
+      <div class="pt-name">Omega</div>
+      <div class="pt-sub">Decision Intelligence & Analytics Platform</div>
+      <p class="pt-desc">Architected an automated decision-intelligence platform using containerized data processing pipelines. Applied classical statistical regression to model future revenue trends directly from raw data, boosting preparation speed by 35%.</p>
+      
+      <div class="pt-video-wrap">
+        <iframe class="pt-video-frame" src="https://drive.google.com/file/d/13-fJPfu7vcwgN61EXbKCAaimNfgKmBC2/preview" allow="autoplay; fullscreen" loading="lazy" title="Omega Demo Video"></iframe>
+      </div>
+      <div class="pt-video-meta">
+        <span class="pt-video-label"><span class="live-dot"></span>Video Demo</span>
+        <a href="https://drive.google.com/file/d/13-fJPfu7vcwgN61EXbKCAaimNfgKmBC2/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pt-video-link">Open in Drive ↗</a>
+      </div>
+
+      <div class="pt-tags">
+        <span class="pt-tag gold">Python</span>
+        <span class="pt-tag violet">OpenAI</span>
+        <span class="pt-tag teal">SQL</span>
+        <span class="pt-tag indigo">Docker</span>
+        <span class="pt-tag">Streamlit</span>
+        <span class="pt-tag gold">Regression</span>
+      </div>
+      <div class="pt-metrics">
+        <div class="pt-metric"><span class="mv">+35%</span><span class="ml">Data Prep</span></div>
+        <div class="pt-metric"><span class="mv">Regr.</span><span class="ml">Revenue Model</span></div>
+        <div class="pt-metric"><span class="mv">Docker</span><span class="ml">Containerized</span></div>
+      </div>
+      <a href="https://drive.google.com/file/d/13-fJPfu7vcwgN61EXbKCAaimNfgKmBC2/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="proj-link">Watch Demo</a>
     </div>
 
   </div>
@@ -1525,6 +1653,10 @@ if(heroCard){
 /* ─── PROJECT TILE TILT ──────────────────────── */
 document.querySelectorAll('.proj-tile').forEach(tile=>{
   tile.addEventListener('mousemove', e=>{
+    if (e.target.closest('.pt-video-wrap') || e.target.closest('.pt-video-meta') || e.target.closest('.proj-link')) {
+      tile.style.transform = '';
+      return;
+    }
     const r = tile.getBoundingClientRect();
     const x = (e.clientX-r.left-r.width/2)/(r.width/2);
     const y = (e.clientY-r.top-r.height/2)/(r.height/2);
