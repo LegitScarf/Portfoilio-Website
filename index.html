@@ -864,53 +864,137 @@ section.reveal.visible { opacity: 1; transform: none; }
 .vision-text p strong { color: var(--text); font-weight: 600; }
 .vision-text p .hl { color: var(--gold); }
 
-.nexalpha-glass {
+.autojob-glass {
   background: var(--glass-2);
   backdrop-filter: blur(24px);
   border: 1px solid var(--border-2);
   border-radius: 22px; padding: 28px;
   position: relative; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
 }
-.nexalpha-glass::before {
+.autojob-glass::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(245,200,66,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(45,212,191,0.5), rgba(245,200,66,0.5), transparent);
 }
 
-.ng-label {
+.aj-label {
   font-size: 10px; font-weight: 700; letter-spacing: 2px;
-  text-transform: uppercase; color: var(--text-3);
-  display: flex; align-items: center; gap: 6px; margin-bottom: 20px;
+  text-transform: uppercase; color: var(--teal);
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;
 }
-.ng-label::before { content:''; width:6px;height:6px;border-radius:50%;background:var(--gold);animation:glow-pulse 2s ease-in-out infinite; }
-
-.ng-prod {
-  background: var(--glass); border: 1px solid var(--border);
-  border-radius: 14px; padding: 16px 18px;
-  margin-bottom: 10px; transition: all 0.25s;
+.aj-status {
+  display: inline-flex; align-items: center; gap: 6px;
 }
-.ng-prod:hover { border-color: rgba(245,200,66,0.3); background: var(--glass-2); }
-.ng-prod:last-of-type { margin-bottom: 0; }
+.aj-status::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal); animation: glow-pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px var(--teal);
+}
+.aj-badge {
+  font-size: 9px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; padding: 3px 8px; border-radius: 100px;
+  color: var(--gold); background: rgba(245,200,66,0.1); border: 1px solid rgba(245,200,66,0.25);
+}
 
-.ng-name {
+.aj-hero {
+  margin-bottom: 20px;
+}
+.aj-title {
   font-family: 'Sora', sans-serif;
-  font-size: 16px; font-weight: 700; color: var(--text);
-  margin-bottom: 4px; letter-spacing: -0.3px;
+  font-size: 22px; font-weight: 800; color: var(--text);
+  margin-bottom: 6px; letter-spacing: -0.5px;
+  display: flex; align-items: center; gap: 8px;
 }
-.ng-name .g { color: var(--gold); }
-.ng-name .t { color: var(--teal); }
-.ng-desc { font-size: 12px; color: var(--text-3); line-height: 1.6; font-weight: 300; }
+.aj-title .g { color: var(--gold); }
+.aj-title .t { color: var(--teal); }
+.aj-sub {
+  font-size: 11px; color: var(--text-3); text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 600; margin-bottom: 10px;
+}
+.aj-desc {
+  font-size: 13px; color: var(--text-2); line-height: 1.7; font-weight: 300;
+}
 
-.ng-link {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 11px; font-weight: 700; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--gold);
-  text-decoration: none; margin-top: 18px;
-  padding-top: 16px; border-top: 1px solid var(--border);
-  width: 100%; transition: gap 0.2s;
+/* Pipeline Architecture Nodes */
+.aj-pipeline {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  margin: 20px 0;
 }
-.ng-link::after { content: '→'; }
-.ng-link:hover { gap: 9px; }
+.aj-node {
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 10px; text-align: center;
+  transition: all 0.25s ease;
+}
+.aj-node:hover {
+  background: var(--glass-2); border-color: rgba(45,212,191,0.3);
+  transform: translateY(-2px);
+}
+.aj-node-icon { font-size: 18px; margin-bottom: 4px; display: block; }
+.aj-node-title { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700; color: var(--text); }
+.aj-node-desc { font-size: 9px; color: var(--text-3); margin-top: 3px; }
+
+/* Live Console / Execution Stream Placeholder */
+.aj-console {
+  background: rgba(0,0,0,0.55); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;
+  font-family: 'Courier New', monospace; font-size: 11px;
+}
+.aj-console-header {
+  display: flex; justify-content: space-between; align-items: center;
+  color: var(--text-3); font-size: 10px; letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 8px; margin-bottom: 10px;
+}
+.aj-console-dots { display: flex; gap: 5px; }
+.aj-console-dots span { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+.aj-console-dots span:nth-child(1) { background: #fb7185; }
+.aj-console-dots span:nth-child(2) { background: #f5c842; }
+.aj-console-dots span:nth-child(3) { background: #2dd4bf; }
+.aj-log { margin-bottom: 6px; line-height: 1.5; }
+.aj-log:last-child { margin-bottom: 0; }
+.aj-log .time { color: var(--text-3); margin-right: 6px; }
+.aj-log .tag { font-weight: 600; padding: 1px 5px; border-radius: 4px; margin-right: 6px; font-size: 9px; }
+.aj-log .tag.teal { background: rgba(45,212,191,0.15); color: var(--teal); }
+.aj-log .tag.gold { background: rgba(245,200,66,0.15); color: var(--gold); }
+.aj-log .tag.indigo { background: rgba(99,102,241,0.15); color: var(--indigo-2); }
+.aj-log .msg { color: var(--text-2); }
+
+/* Live Metrics Row */
+.aj-metrics {
+  display: flex; justify-content: space-around;
+  padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+.aj-metric { text-align: center; }
+.aj-metric .val {
+  font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 800;
+  color: var(--text); display: block;
+}
+.aj-metric .val .t { color: var(--teal); }
+.aj-metric .lbl { font-size: 10px; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Action Links */
+.aj-actions { display: flex; gap: 12px; align-items: center; }
+.aj-btn-primary {
+  flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: linear-gradient(135deg, var(--teal), #14b8a6);
+  color: #070b18; font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+  text-transform: uppercase; text-decoration: none; padding: 10px 16px;
+  border-radius: 10px; transition: transform 0.2s, box-shadow 0.2s;
+}
+.aj-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45,212,191,0.35);
+}
+.aj-btn-secondary {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 600; color: var(--text-2);
+  text-decoration: none; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid var(--border); transition: all 0.2s;
+}
+.aj-btn-secondary:hover {
+  color: var(--gold); border-color: rgba(245,200,66,0.3); background: var(--glass);
+}
 
 /* ════════════════════════════════════════════
    FOOTER
@@ -1006,7 +1090,7 @@ footer {
     <div class="hero-sub">Product Builder.</div>
 
     <p class="hero-desc">
-      CS graduate from <strong>KIIT</strong>, SWE Trainee at <strong>Capgemini</strong>, and founder of <strong>NexAlpha</strong>. I build agentic AI systems, production ML pipelines, and cloud infrastructure that actually ships.
+      CS graduate from <strong>KIIT</strong>, SWE Trainee at <strong>Capgemini</strong>, and builder of <strong>AutoJob</strong>. I build agentic AI systems, production ML pipelines, and cloud infrastructure that actually ships.
     </p>
 
     <div class="hero-actions">
@@ -1028,7 +1112,7 @@ footer {
         <span class="hstat-lbl">Internships</span>
       </div>
       <div class="hstat">
-        <span class="hstat-num">8.22</span>
+        <span class="hstat-num">8.33</span>
         <span class="hstat-lbl">CGPA · KIIT</span>
       </div>
     </div>
@@ -1056,7 +1140,7 @@ footer {
         </div>
         <div class="gc-row">
           <span class="gc-key">Building</span>
-          <span class="gc-val teal">NexAlpha</span>
+          <span class="gc-val teal">AutoJob</span>
         </div>
         <div class="gc-row">
           <span class="gc-key">Location</span>
@@ -1111,7 +1195,7 @@ footer {
         I've shipped multi-agent systems using <span class="hl-indigo">CrewAI, LangGraph, and OpenAI Agents SDK</span>, engineered ML pipelines on AWS SageMaker, and deployed production services with Jenkins CI/CD. I don't prototype and walk away — I see things through.
       </p>
       <p>
-        Outside engineering: McKinsey Forward Fellow, NCC Cadet Corps Leader (30+ cadets), and finance analyst at an investment club — an experience that first sparked <span class="hl-gold">NexAlpha</span>, which has since grown into my own AI-driven workflow automation venture for businesses.
+        Outside engineering: McKinsey Forward Fellow, NCC Cadet Corps Leader (30+ cadets), and finance analyst at an investment club — an analytical mindset that inspired <span class="hl-gold">AutoJob</span>, my autonomous agentic application that directly applies to multiple job roles at once without human intervention.
       </p>
 
       <div class="contact-list">
@@ -1147,7 +1231,7 @@ footer {
         </div>
         <div class="ic-row">
           <div class="ic-bullet indigo"></div>
-          <div class="ic-text">Founder — NexAlpha<span>AI Workflow Automation for Businesses</span></div>
+          <div class="ic-text">Creator — AutoJob<span>Autonomous Multi-Role Job Application Engine</span></div>
         </div>
         <div class="ic-row">
           <div class="ic-bullet teal"></div>
@@ -1515,7 +1599,7 @@ footer {
     <div class="ach-tile">
       <span class="at-icon">📈</span>
       <div class="at-title">Finance Member — Kraya & Kuber</div>
-      <p class="at-desc">Analysed annual reports to identify equity investments — the experience that seeded NexAlpha.</p>
+      <p class="at-desc">Analysed annual reports to identify equity investments — formative experience in financial modeling and automated data extraction.</p>
     </div>
   </div>
 </section>
@@ -1529,21 +1613,74 @@ footer {
     <div class="vision-text">
       <p><strong>Agentic AI is the next layer of the software stack.</strong> We're moving from AI as a tool you query to AI as a system that reasons, plans, and acts — and I intend to be someone building those systems.</p>
       <p>Multi-agent architectures — where specialised models collaborate, validate, and execute in parallel — will define the next generation of intelligent applications. <span class="hl">Not prototypes. Production systems that people rely on.</span></p>
-      <p>NexAlpha is my live expression of that conviction — bringing agentic workflow automation to businesses still buried in repetitive, manual processes. One product live, more automation tools in the pipeline.</p>
+      <p>AutoJob is my live expression of that conviction — an autonomous multi-agent application engineered to scout job openings, synthesize custom ATS-optimized resumes, and directly apply to multiple target roles at once without human intervention.</p>
       <p>From here: deeper expertise in LLM infrastructure at scale, agentic reasoning frameworks, and the kind of systems intuition that only comes from shipping things that actually matter.</p>
     </div>
 
-    <div class="nexalpha-glass">
-      <div class="ng-label">Currently Building · NexAlpha</div>
-      <div class="ng-prod">
-        <div class="ng-name"><span class="g">Nex</span>Alpha</div>
-        <div class="ng-desc">Agentic workflow automation for SMBs and enterprises. Autonomous agents handle repetitive business processes — data entry, reporting, and cross-tool orchestration — end-to-end.</div>
+    <div class="autojob-glass">
+      <div class="aj-label">
+        <span class="aj-status">Currently Building</span>
+        <span class="aj-badge">Autonomous Mode</span>
       </div>
-      <div class="ng-prod">
-        <div class="ng-name"><span class="t">Bharat</span>Alpha</div>
-        <div class="ng-desc">AI equity research platform built specifically for India — fundamental analysis, sector intelligence, and company deep-dives at scale.</div>
+
+      <div class="aj-hero">
+        <div class="aj-title"><span class="t">Auto</span><span class="g">Job</span></div>
+        <div class="aj-sub">Autonomous Multi-Role Application Engine</div>
+        <p class="aj-desc">Multi-agent system designed to autonomously monitor recruitment boards, tailor ATS resumes, generate custom screening responses, and dispatch applications directly across multiple job roles with 0 human intervention.</p>
       </div>
-      <a href="https://legitscarf.github.io/" target="_blank" class="ng-link">Visit NexAlpha</a>
+
+      <!-- 3-Agent Workflow Pipeline -->
+      <div class="aj-pipeline">
+        <div class="aj-node">
+          <span class="aj-node-icon">🛰️</span>
+          <div class="aj-node-title">Scout Agent</div>
+          <div class="aj-node-desc">Job board scraper & ATS filter</div>
+        </div>
+        <div class="aj-node">
+          <span class="aj-node-icon">🧠</span>
+          <div class="aj-node-title">Tailor Agent</div>
+          <div class="aj-node-desc">LLM resume & prompt synthesis</div>
+        </div>
+        <div class="aj-node">
+          <span class="aj-node-icon">⚡</span>
+          <div class="aj-node-title">Exec Agent</div>
+          <div class="aj-node-desc">Browser portal submission bot</div>
+        </div>
+      </div>
+
+      <!-- Live Mock Console Stream / Placeholder -->
+      <div class="aj-console">
+        <div class="aj-console-header">
+          <div class="aj-console-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span>autojob-daemon://live-runtime</span>
+        </div>
+        <div class="aj-log"><span class="time">[09:42:01]</span><span class="tag teal">SCOUT</span><span class="msg">Scanned 140+ matching roles across Greenhouse & Lever</span></div>
+        <div class="aj-log"><span class="time">[09:42:09]</span><span class="tag gold">TAILOR</span><span class="msg">Customized 18 resumes (ATS score &gt; 94%)</span></div>
+        <div class="aj-log"><span class="time">[09:42:18]</span><span class="tag indigo">DISPATCH</span><span class="msg">Auto-submitted 12 applications · 0 human intervention</span></div>
+      </div>
+
+      <!-- Live Metrics Row -->
+      <div class="aj-metrics">
+        <div class="aj-metric">
+          <span class="val"><span class="t">100</span>%</span>
+          <span class="lbl">Zero Touch</span>
+        </div>
+        <div class="aj-metric">
+          <span class="val">&lt; 2<span class="t">m</span></span>
+          <span class="lbl">Per Role</span>
+        </div>
+        <div class="aj-metric">
+          <span class="val">24<span class="t">/</span>7</span>
+          <span class="lbl">Daemon Active</span>
+        </div>
+      </div>
+
+      <div class="aj-actions">
+        <a href="https://github.com/legitscarf" target="_blank" rel="noopener noreferrer" class="aj-btn-primary">Explore AutoJob →</a>
+        <a href="#projects" class="aj-btn-secondary">View Demos</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1558,7 +1695,7 @@ footer {
     <a href="https://linkedin.com/in/arpanmallik9645" target="_blank" class="fn-link">LinkedIn</a>
     <a href="https://github.com/legitscarf" target="_blank" class="fn-link">GitHub</a>
     <a href="mailto:arpanmallik173@gmail.com" class="fn-link">Email</a>
-    <a href="https://legitscarf.github.io/" target="_blank" class="fn-link">NexAlpha ↗</a>
+    <a href="https://github.com/legitscarf" target="_blank" class="fn-link">AutoJob ↗</a>
   </div>
   <div class="footer-copy">
     <div>© 2025 Arpan Kumar Mallik</div>
