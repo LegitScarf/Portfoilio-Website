@@ -1,0 +1,750 @@
+# Transform My Existing Portfolio into a Premium, Cinematic Developer & AI Engineer Portfolio
+
+I have an existing personal portfolio website currently implemented as an `index.html` website and hosted through GitHub/GitHub Pages.
+
+I want you to **completely redesign and transform the existing website**, while preserving and intelligently restructuring my existing content, projects, experience, skills, achievements, and links.
+
+Use the attached/reference portfolio video as the **visual and interaction inspiration**.
+
+The goal is NOT to make a generic developer portfolio.
+
+The goal is to create a **premium, cinematic, modern personal brand website** that looks like the portfolio of a high-end AI Engineer / Data Analyst / Product Builder.
+
+---
+
+## 1. Core Design Direction
+
+Create a website with the following aesthetic:
+
+* Premium
+* Cinematic
+* Minimal
+* Dark
+* Futuristic but professional
+* Editorial / magazine-inspired
+* High-end SaaS/product aesthetic
+* Strong typography
+* Generous whitespace
+* Subtle animations
+* Smooth scrolling
+* Sophisticated micro-interactions
+* Visually impressive without becoming cluttered
+
+The website should feel closer to a **premium digital product landing page** than a traditional résumé website.
+
+Avoid:
+
+* Generic Bootstrap portfolio layouts
+* Excessive cards everywhere
+* Bright gradients
+* Overly colorful UI
+* Excessive glassmorphism
+* Stock illustrations
+* Generic developer icons
+* Huge walls of text
+* Template-like layouts
+* Unnecessary animations
+* "AI-generated website" aesthetics
+
+The design should communicate:
+
+> "This person builds serious technology products and understands both engineering and business."
+
+---
+
+# 2. TECH STACK
+
+Use a modern production-quality frontend stack.
+
+### Primary Stack
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Framer Motion
+* Lucide React
+* shadcn/ui where useful
+* CSS custom properties for theming
+* GitHub Pages for deployment
+
+If the existing project is currently plain HTML/CSS/JS, migrate it into this React + TypeScript architecture rather than continuing to expand the single `index.html`.
+
+### Recommended supporting libraries
+
+Use only where they genuinely improve the experience:
+
+* Framer Motion — animations and page transitions
+* Lenis — smooth scrolling
+* Lucide React — icons
+* React Intersection Observer or equivalent — scroll-triggered animations
+
+Do NOT add unnecessary dependencies.
+
+---
+
+# 3. COLOR SYSTEM
+
+Use a sophisticated dark theme.
+
+Primary background:
+
+* Near-black / charcoal
+* Example: #080808 / #0A0A0A
+
+Primary text:
+
+* Off-white
+* Example: #F5F5F5
+
+Secondary text:
+
+* Muted gray
+* Example: #8A8A8A
+
+Borders:
+
+* Very subtle gray/white transparency
+
+Accent:
+
+Use ONE restrained accent color, preferably a sophisticated electric blue/violet or another color that complements the existing portfolio.
+
+The accent should be used sparingly for:
+
+* Interactive states
+* Links
+* Small highlights
+* Active navigation
+* Important metrics
+
+Do not turn the entire website into a neon cyberpunk design.
+
+---
+
+# 4. TYPOGRAPHY
+
+Typography is extremely important.
+
+Use a modern premium sans-serif such as:
+
+* Inter
+* Geist
+* Manrope
+* Plus Jakarta Sans
+
+Use very large typography for major headings.
+
+Example hierarchy:
+
+H1:
+
+"AI Engineer.
+Data Analyst.
+Product Builder."
+
+or an equivalent headline derived from my actual profile.
+
+Use:
+
+* Large display typography
+* Tight letter spacing
+* Strong contrast
+* Short statements
+* Small uppercase labels
+* Editorial-style section headings
+
+Typography should do a lot of the visual work.
+
+---
+
+# 5. HERO SECTION
+
+The hero section should immediately create a strong first impression.
+
+Create a full-screen or near-full-screen hero.
+
+Include:
+
+Small eyebrow text:
+
+"ARPAN KUMAR MALLIK"
+
+Then a huge headline communicating my positioning.
+
+Example:
+
+"Building intelligent systems
+that turn data into decisions."
+
+Below it, a concise description explaining that I work across:
+
+* AI
+* Data Analytics
+* Machine Learning
+* GenAI
+* Product Development
+
+Add two primary CTAs:
+
+**Explore My Work**
+
+**Let's Connect**
+
+Also include subtle social/contact links.
+
+---
+
+# 6. HERO VISUAL
+
+The hero should NOT simply be a block of text.
+
+Create a sophisticated visual treatment such as:
+
+* Large portrait/photo if available
+* Abstract data visualization
+* Interactive AI/system visualization
+* Subtle animated grid
+* Floating metadata
+* Minimal particles
+* Moving gradient/noise texture
+* Animated lines
+* Cursor-reactive elements
+
+Keep the effect subtle and premium.
+
+The visual should support the content rather than distract from it.
+
+If my existing website contains a professional photo, reuse it.
+
+Do not invent a fake person or fake photograph.
+
+---
+
+# 7. NAVIGATION
+
+Create a minimal sticky navigation.
+
+Navigation items:
+
+* Home
+* About
+* Experience
+* Projects
+* Skills
+* Achievements
+* Contact
+
+The navigation should be visually minimal.
+
+On desktop:
+
+Logo/name on the left.
+
+Navigation in the center/right.
+
+A small CTA such as:
+
+"Let's Talk →"
+
+On scroll, the navbar should subtly change appearance using blur/transparency.
+
+On mobile, use a clean animated menu.
+
+---
+
+# 8. ABOUT / INTRODUCTION
+
+Instead of a conventional "About Me" card, create an editorial-style section.
+
+Example structure:
+
+ABOUT
+
+"I build at the intersection of
+technology, analytics and product."
+
+Then provide a concise but compelling narrative about my background.
+
+Highlight my progression across:
+
+* Computer Science
+* Data Analytics
+* Machine Learning
+* GenAI
+* Software Engineering
+* Product development
+* Business/strategy
+
+Use large typography and short paragraphs.
+
+Do not make this section feel like a résumé.
+
+---
+
+# 9. EXPERIENCE
+
+Create a premium timeline-based experience section.
+
+Each experience should contain:
+
+* Organization
+* Role
+* Duration
+* Location if available
+* Short description
+* Key contributions
+* Technologies
+
+Use scroll-triggered animations.
+
+The experience timeline should be visually elegant and compact.
+
+Avoid creating huge rectangular cards.
+
+---
+
+# 10. FEATURED PROJECTS
+
+This should be one of the most impressive sections.
+
+Treat my projects like **products**, not merely GitHub assignments.
+
+Feature projects such as:
+
+### Omega
+
+Multi-Agentic / Low-Code Data Analytics Platform
+
+Explain:
+
+* What problem it solves
+* How the multi-agent architecture works
+* Technology used
+* Business value
+* Deployment
+
+### OptiTrade
+
+AI-powered options trading system
+
+Explain:
+
+* Multi-agent architecture
+* Real-time market data
+* Trading workflow
+* AI/ML components
+* Infrastructure
+* Deployment
+
+### NexAlpha
+
+Technology/product venture
+
+Present the product/business aspect rather than simply listing technical features.
+
+### Other projects
+
+Include relevant ML/data projects such as:
+
+* FlightFare AI
+* Fraudulent Job Posting Prediction
+* Brain Tumor Detection
+* Smart Region Clustering
+* Credit Default Risk Prediction
+* Digit Recognition
+
+Prioritize the strongest projects.
+
+Do NOT show every project with equal visual weight.
+
+---
+
+# 11. PROJECT INTERACTION
+
+Make project presentation interactive.
+
+For featured projects:
+
+* Large visual section
+* Project number
+* Category
+* Large project title
+* Short description
+* Key metrics
+* Technology tags
+* GitHub link
+* Live demo link if available
+
+Use hover interactions.
+
+Possible interaction:
+
+When the user hovers over a project, a preview image/video/visual appears and follows the cursor subtly.
+
+Use Framer Motion for this.
+
+Keep animations performant.
+
+---
+
+# 12. METRICS / ACHIEVEMENTS
+
+Create a visually striking metrics section.
+
+Examples based on my actual portfolio:
+
+* 98% — CAT percentile
+* 20K+ — Revenue generated from venture
+* 98.68% — Fraud detection model accuracy
+* 74% — Processing time reduction
+* 85.8% — CNN test accuracy
+* 8.33 — B.Tech CGPA
+
+Only include metrics that actually exist in my portfolio.
+
+Do NOT fabricate achievements.
+
+Present them using large typography.
+
+Example:
+
+98.68%
+
+Model Accuracy
+
+rather than a traditional card.
+
+---
+
+# 13. TECHNOLOGY / SKILLS
+
+Create an interactive technology section.
+
+Group technologies into categories:
+
+### AI / Machine Learning
+
+Python, TensorFlow, Keras, Scikit-learn, Neural Networks, Computer Vision, Time Series
+
+### GenAI / LLM Engineering
+
+LLMs, Prompt Engineering, Hugging Face, Quantization, Tokenizers, Agentic AI, LangGraph, CrewAI, OpenAI Agents SDK
+
+### Data & Analytics
+
+SQL, Power BI, Tableau, Excel, Statistics, EDA, A/B Testing, BigQuery
+
+### Cloud / Engineering
+
+AWS, SageMaker, EC2, S3, Docker, Git, Jenkins, CI/CD
+
+### Development
+
+Python, C++, C, React, Streamlit, APIs
+
+Make this section visually interesting rather than simply displaying a huge list of badges.
+
+Use subtle hover effects.
+
+---
+
+# 14. "HOW I THINK" SECTION
+
+Add a differentiated section that communicates my approach.
+
+For example:
+
+01 — Understand the problem
+
+02 — Find the signal in the data
+
+03 — Build the system
+
+04 — Validate the result
+
+05 — Turn it into a product
+
+This section should reinforce that I am not simply someone who trains ML models—I understand **problem solving, analytics, engineering and product thinking**.
+
+---
+
+# 15. EDUCATION & CERTIFICATIONS
+
+Create a clean editorial section for:
+
+* KIIT University
+* IIT Jodhpur
+* Relevant certifications
+* McKinsey Forward Learner Program
+* Other significant programs
+
+Do not make this section overly large.
+
+---
+
+# 16. ACHIEVEMENTS & LEADERSHIP
+
+Include relevant achievements such as:
+
+* NCC A Certificate
+* Coding achievements
+* McKinsey Forward Learner
+* Finance/college society involvement
+* Relevant competitions/programs
+
+Only use factual information already present in my existing portfolio.
+
+---
+
+# 17. CONTACT SECTION
+
+End with a dramatic but minimal contact section.
+
+Large headline:
+
+"Let's build something
+worth talking about."
+
+Include:
+
+* Email
+* LinkedIn
+* GitHub
+* Other relevant professional links
+
+Add a clear CTA:
+
+"Start a conversation →"
+
+The footer should be minimal.
+
+---
+
+# 18. ANIMATION SYSTEM
+
+Animations are important, but they must feel intentional.
+
+Use Framer Motion for:
+
+* Page entrance
+* Text reveal
+* Scroll-triggered sections
+* Image reveal
+* Project hover
+* Navigation transitions
+* Number counters
+* Button interactions
+* Cursor interactions where appropriate
+
+Use staggered text reveals.
+
+Use smooth section transitions.
+
+Use subtle parallax.
+
+Do NOT animate everything.
+
+The website should still feel fast.
+
+---
+
+# 19. MICRO-INTERACTIONS
+
+Add polished micro-interactions:
+
+* Magnetic CTA buttons
+* Animated arrow icons
+* Underline animations
+* Image hover transitions
+* Project preview transitions
+* Cursor-following project thumbnails
+* Smooth anchor scrolling
+* Subtle navbar transformation on scroll
+* Hover states for technology tags
+
+Everything should remain professional.
+
+---
+
+# 20. RESPONSIVENESS
+
+The website must be excellent on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Do not simply shrink the desktop layout.
+
+Create intentional mobile layouts.
+
+On mobile:
+
+* Simplify animations
+* Stack sections
+* Maintain large typography
+* Keep navigation clean
+* Ensure buttons are thumb-friendly
+* Avoid horizontal overflow
+* Optimize images
+
+---
+
+# 21. PERFORMANCE
+
+The website should be production-quality.
+
+Requirements:
+
+* Lazy-load images
+* Optimize assets
+* Avoid unnecessarily large libraries
+* Minimize JavaScript where possible
+* Maintain smooth scrolling
+* Avoid animation-induced layout shifts
+* Optimize for Core Web Vitals
+* Semantic HTML
+* Accessible interactive elements
+* Keyboard navigation
+* Good color contrast
+* Proper alt text
+
+Target:
+
+90+ Lighthouse performance where practical.
+
+---
+
+# 22. SEO
+
+Implement:
+
+* Proper page title
+* Meta description
+* Open Graph metadata
+* Twitter/X metadata
+* Semantic HTML
+* Structured headings
+* Favicon
+* Canonical URL placeholder
+* Person/Portfolio structured data if appropriate
+
+The website should be discoverable when someone searches for my name.
+
+---
+
+# 23. GITHUB / DEPLOYMENT
+
+The final project must work cleanly with GitHub Pages.
+
+Provide:
+
+* Proper Vite configuration
+* Correct base path handling
+* Production build configuration
+* GitHub Pages deployment instructions
+* GitHub Actions workflow if appropriate
+
+The final result should be deployable from my GitHub repository without complicated infrastructure.
+
+---
+
+# 24. IMPORTANT: PRESERVE MY INFORMATION
+
+This is a redesign, NOT a fictional portfolio generation.
+
+Before changing the UI:
+
+1. Inspect my existing website.
+2. Extract all existing content.
+3. Preserve accurate information.
+4. Improve wording where necessary.
+5. Reorganize information into the new architecture.
+6. Remove outdated/redundant content if appropriate.
+7. Do NOT invent:
+
+   * companies
+   * job titles
+   * projects
+   * revenue
+   * awards
+   * metrics
+   * certifications
+   * employment
+   * clients
+   * testimonials
+
+If something is missing, leave a clearly marked placeholder rather than fabricating it.
+
+---
+
+# 25. PERSONAL BRAND POSITIONING
+
+The final website should position me as:
+
+**AI Engineer × Data Analyst × Product Builder**
+
+The underlying narrative should be:
+
+> I don't just build models. I use data, AI and engineering to solve real problems and turn ideas into usable products.
+
+This should be evident throughout the website without repeatedly stating it.
+
+---
+
+# 26. VISUAL REFERENCE
+
+Use the supplied reference video as inspiration for:
+
+* Dark cinematic aesthetic
+* Typography
+* Layout rhythm
+* Transitions
+* Visual hierarchy
+* Minimal navigation
+* Project presentation
+* Premium feel
+* Motion design
+
+However, do NOT copy the original website's:
+
+* exact text
+* exact layouts
+* branding
+* identity
+* images
+* proprietary graphics
+
+Create an original design inspired by the visual language.
+
+---
+
+# 27. FINAL QUALITY BAR
+
+When finished, the website should feel like something that could realistically be the portfolio of a strong:
+
+* AI Engineer
+* Data Scientist
+* Analytics Engineer
+* Product Engineer
+* Technical Product Builder
+
+It should look polished enough to show to:
+
+* Recruiters
+* Hiring managers
+* Founders
+* Consulting firms
+* Product companies
+* MBA admissions committees
+* Potential clients
+
+The first 5 seconds should communicate:
+
+**Who I am → What I build → Why my work is interesting → Where to explore it.**
+
+Do not stop after creating the basic layout.
+
+Polish spacing, typography, animation timing, hover states, responsive behavior, accessibility and visual consistency until the website feels like a **premium personal brand/product experience rather than a conventional developer portfolio.**
