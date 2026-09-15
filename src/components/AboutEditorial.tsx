@@ -101,8 +101,8 @@ export const AboutEditorial: React.FC = () => {
                 </div>
 
                 <div className="flex justify-between items-start pb-3 border-b border-white/[0.06]">
-                  <span className="text-neutral-400 font-mono text-xs">Flagship Venture</span>
-                  <span className="text-indigo-400 font-medium text-right">AutoJob Autonomous Engine</span>
+                  <span className="text-neutral-400 font-mono text-xs">Active Build</span>
+                  <span className="text-amber-400 font-medium text-right">AutoJob Daemon (In Development)</span>
                 </div>
 
                 <div className="flex justify-between items-start pb-3 border-b border-white/[0.06]">

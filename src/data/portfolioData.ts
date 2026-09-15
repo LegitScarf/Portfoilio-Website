@@ -70,9 +70,9 @@ export const KEY_METRICS: MetricItem[] = [
     subtext: "Standardized Decision Pipelines"
   },
   {
-    value: "100%",
-    label: "Autonomous Execution",
-    subtext: "AutoJob Zero-Touch Engine"
+    value: "98%",
+    label: "LSTM Accuracy",
+    subtext: "Sentiment Analysis Model"
   },
   {
     value: "8+",
@@ -149,15 +149,16 @@ export const PROJECTS: ProjectItem[] = [
     id: "autojob",
     num: "04",
     title: "AutoJob",
-    category: "Autonomous Agent System",
-    headline: "Autonomous Multi-Role Job Application Daemon",
-    description: "Engineered a zero-touch 3-agent daemon (Scout, Tailor, Executor) designed to autonomously monitor recruitment boards, synthesize custom ATS-optimized resumes (ATS score > 94%), and dispatch verified applications without manual human intervention.",
+    category: "Autonomous Agent Architecture",
+    headline: "Autonomous Multi-Role Job Application Engine (Under Development)",
+    description: "Currently engineering an autonomous 3-agent daemon (Scout, Tailor, Executor) designed to monitor recruitment boards, synthesize custom ATS-optimized resumes (target ATS score > 94%), and dispatch applications without manual human intervention.",
+    statusBadge: "Under Development",
     metrics: [
-      { label: "Human Touch", value: "0%" },
-      { label: "Application Time", value: "< 2m" },
-      { label: "Architecture", value: "3 Agents" }
+      { label: "Target Automation", value: "100%" },
+      { label: "Target Per Role", value: "< 2m" },
+      { label: "Status", value: "In Build" }
     ],
-    tags: ["Agentic AI", "Python", "LLMs", "ATS Optimization", "Web Automation", "Docker"],
+    tags: ["Agentic AI", "Python", "LLMs", "ATS Optimization", "Web Automation", "In Progress"],
     links: {
       github: "https://github.com/legitscarf"
     }

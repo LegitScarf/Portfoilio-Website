@@ -15,6 +15,7 @@ export interface ProjectItem {
     drive?: string;
   };
   featured?: boolean;
+  statusBadge?: string;
 }
 
 export interface ExperienceItem {

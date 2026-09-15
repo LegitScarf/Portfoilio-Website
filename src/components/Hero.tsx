@@ -154,9 +154,10 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Floating micro-badges */}
-            <div className="absolute -bottom-4 -left-4 bg-[#0e0e12]/90 border border-white/10 px-3.5 py-2 rounded-xl backdrop-blur-xl shadow-lg flex items-center gap-2">
+            <div className="absolute -bottom-4 -left-4 bg-[#0e0e12]/90 border border-amber-500/20 px-3.5 py-2 rounded-xl backdrop-blur-xl shadow-lg flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span className="text-xs font-mono text-neutral-200">AutoJob Zero-Touch Daemon</span>
+              <span className="text-xs font-mono text-neutral-200">AutoJob Daemon</span>
+              <span className="text-[10px] font-mono text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded border border-amber-400/20">In Build</span>
             </div>
           </div>
         </motion.div>

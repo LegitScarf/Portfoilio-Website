@@ -93,12 +93,17 @@ const ProjectCard: React.FC<{ project: ProjectItem; index: number }> = ({ projec
           <span className="font-mono text-xs text-neutral-500 tracking-wider">
             {project.num} // {project.category}
           </span>
-          {project.featured && (
+          {project.statusBadge ? (
+            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-amber-400 px-2.5 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/25">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              {project.statusBadge}
+            </span>
+          ) : project.featured ? (
             <span className="inline-flex items-center gap-1 text-[11px] font-mono uppercase tracking-wider text-emerald-400 px-2.5 py-0.5 rounded-full bg-emerald-400/10 border border-emerald-400/25">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               Live Product
             </span>
-          )}
+          ) : null}
         </div>
 
         {/* Title & Subtitle */}
@@ -161,9 +166,14 @@ const ProjectCard: React.FC<{ project: ProjectItem; index: number }> = ({ projec
 
         {/* AutoJob Pipeline Graphic if AutoJob */}
         {project.id === 'autojob' && (
-          <div className="mb-6 p-4 rounded-xl bg-black/50 border border-white/10 space-y-3">
-            <div className="text-[11px] font-mono text-neutral-400 uppercase tracking-wider flex items-center gap-2">
-              <Layers className="w-3.5 h-3.5 text-teal-400" /> 3-Agent Autonomous Execution Loop
+          <div className="mb-6 p-4 rounded-xl bg-black/50 border border-amber-500/20 space-y-3">
+            <div className="text-[11px] font-mono text-amber-400/90 uppercase tracking-wider flex items-center justify-between">
+              <span className="flex items-center gap-2">
+                <Layers className="w-3.5 h-3.5 text-amber-400" /> 3-Agent Autonomous Execution Loop
+              </span>
+              <span className="text-[10px] text-amber-400 font-semibold px-2 py-0.5 rounded bg-amber-400/10 border border-amber-400/25">
+                In Development
+              </span>
             </div>
             <div className="grid grid-cols-3 gap-2 text-center text-xs">
               <div className="p-2.5 rounded-lg bg-white/[0.04] border border-white/5">
