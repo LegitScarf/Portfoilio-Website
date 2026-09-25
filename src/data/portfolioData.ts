@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   eyebrow: "ARPAN KUMAR MALLIK",
   role: "AI Engineer × Data Analyst × Product Builder",
   headline: "Building intelligent systems that turn data into decisions.",
-  bio: "CS graduate from KIIT and SWE Trainee at Capgemini. I engineer autonomous multi-agent architectures, scalable machine learning pipelines on AWS, and data-driven products that deliver measurable business impact.",
+  bio: "CS graduate from KIIT and SWE Trainee at Capgemini. Founder & Principal Architect at Nex-Alpha, an autonomous margin audit engine. I engineer multi-agent architectures, cloud sandboxes, and production data products that deliver measurable bottom-line profit impact.",
   location: "Kolkata, West Bengal, India",
   email: "arpanmallik173@gmail.com",
   phone: "+91 6289571773",
@@ -83,8 +83,28 @@ export const KEY_METRICS: MetricItem[] = [
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "automl",
+    id: "nex-alpha",
     num: "01",
+    title: "Nex-Alpha",
+    category: "Autonomous Decision Intelligence & Margin Audit Platform",
+    headline: "Commercial Multi-Agent SaaS for E-Commerce Unit Economics & Profit Audit",
+    description: "Architected a dual-engine decision intelligence platform engineered for D2C/Retail brands. Orchestrates a 3-agent autonomous Python reasoning loop (Planner, Fortified Sandbox Coder, Strategic Insight Generator) capable of ingesting raw multi-thousand-row transaction datasets, isolating fulfillment cash leaks (RTO drag, 3PL weight disputes, SKU margin decay), and deterministically generating Tier-1 institutional executive PDF audit dossiers with interactive Plotly scenario bridges.",
+    metrics: [
+      { label: "Turnaround SLA", value: "< 48h" },
+      { label: "Execution Sandbox", value: "Sub-Second" },
+      { label: "Commercial Pilot", value: "₹14,999" }
+    ],
+    tags: ["Next.js 14", "FastAPI", "Pandas", "Plotly", "React-PDF", "Docker", "n8n Cloud", "Neon Postgres", "Clerk"],
+    links: {
+      demo: "https://nex-alpha-main.vercel.app/",
+      github: "https://github.com/LegitScarf/Nex-Alpha"
+    },
+    featured: true,
+    statusBadge: "Live Production SaaS"
+  },
+  {
+    id: "automl",
+    num: "02",
     title: "AutoML",
     category: "Autonomous Agentic AI",
     headline: "Agentic Model Training & Optimization Platform",
@@ -105,7 +125,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "leadfox",
-    num: "02",
+    num: "03",
     title: "LeadFox",
     category: "Multi-Agent Automation",
     headline: "Autonomous Recruiter Outreach & Intelligence Engine",
@@ -126,7 +146,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "omega",
-    num: "03",
+    num: "04",
     title: "Omega",
     category: "Decision Intelligence & Analytics",
     headline: "Automated Enterprise Decision-Intelligence Platform",
@@ -147,7 +167,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "autojob",
-    num: "04",
+    num: "05",
     title: "AutoJob",
     category: "Autonomous Agent Architecture",
     headline: "Autonomous Multi-Role Job Application Engine (Under Development)",
@@ -165,7 +185,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "optitrade",
-    num: "05",
+    num: "06",
     title: "OptiTrade",
     category: "Fintech & Algorithmic Intelligence",
     headline: "AI-Powered Options Trading & Risk Management Architecture",
@@ -182,7 +202,7 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "fraud-detection",
-    num: "06",
+    num: "07",
     title: "Fraudulent Job Prediction",
     category: "Applied Machine Learning",
     headline: "High-Precision Fraud Detection Classifier",

@@ -232,17 +232,30 @@ const ProjectCard: React.FC<{ project: ProjectItem; index: number }> = ({ projec
           )}
         </div>
 
-        {project.links.drive && (
-          <a
-            href={project.links.drive}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-mono text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1 transition-colors"
-          >
-            <span>Watch Demo</span>
-            <ExternalLink className="w-3 h-3" />
-          </a>
-        )}
+        <div className="flex items-center gap-4">
+          {project.links.demo && (
+            <a
+              href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1.5 transition-colors"
+            >
+              <span>Live Platform</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          )}
+          {project.links.drive && (
+            <a
+              href={project.links.drive}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1 transition-colors"
+            >
+              <span>Watch Demo</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          )}
+        </div>
       </div>
     </motion.div>
   );
